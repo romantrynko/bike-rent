@@ -20,7 +20,7 @@ class App extends Component {
 
     if (!bikes) return;
 
-    this.setState({bikes});
+    this.setState({ bikes });
   }
 
   addBike = async (newBike) => {
@@ -30,7 +30,7 @@ class App extends Component {
     ];
 
     await localforage.setItem(BIKES_KEY, bikesWithNewBike);
-    this.setState({bikes: bikesWithNewBike});
+    this.setState({ bikes: bikesWithNewBike });
   }
 
   removeBike = async (id) => {
@@ -72,8 +72,12 @@ class App extends Component {
 
         <BikeAddForm bikes={bikes} onAddBike={this.addBike} />
 
+        <hr className="h-divider" />
+
+        <hr className="v-Separator" />
+
         <div className="stats">
-          <Stats bikes={bikes}/>
+          <Stats bikes={bikes} />
         </div>
 
         <Footer />

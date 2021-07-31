@@ -31,8 +31,8 @@ export default function BikeCard({ bike, removeBike, changeStatus }) {
             <span className={cn({ "unavailable-text": isUnavailable })}>({color.toUpperCase()})</span>
             <div className={cn("id", { "unavailable-text": isUnavailable })}>ID: {id}</div>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'row' }}>
-            <div className="status">
+          <div className="status" >
+            <div >
               STATUS:
             </div>
             <StatusDropdown id={id} changeStatus={changeStatus} status={status} />

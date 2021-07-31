@@ -64,8 +64,19 @@ export default class BikeAddForm extends Component {
   onSubmit = (event) => {
     event.preventDefault();
 
-    const { onAddBike } = this.props;
-    const { name, type, color, wheelSize, price, id, description } = this.state;
+    const {
+      onAddBike
+    } = this.props;
+    const {
+      name,
+      type,
+      color,
+      wheelSize,
+      price,
+      id,
+      description
+    } = this.state;
+
     const newBike = {
       name,
       type,
@@ -80,7 +91,15 @@ export default class BikeAddForm extends Component {
   };
 
   render() {
-    const { name, type, color, wheelSize, price, id, description } = this.state;
+    const {
+      name,
+      type,
+      color,
+      wheelSize,
+      price,
+      id,
+      description
+    } = this.state;
 
     return (
       <form className="bike-add-form" onSubmit={this.onSubmit}>
@@ -124,7 +143,6 @@ export default class BikeAddForm extends Component {
             id="wheelsize"
             placeholder="Wheel size"
             required
-            minLength={5}
             value={wheelSize}
             onChange={this.onWheelsizeChange}
           />
@@ -162,15 +180,23 @@ export default class BikeAddForm extends Component {
         />
 
         <div className="button-row">
-          <button type="submit" className="btn" onSubmit={this.onSubmit}>
-           SAVE
+          <button
+            className="btn"
+            type="submit"
+            onSubmit={this.onSubmit}
+          >
+            SAVE
           </button>
-          <button type="button" onClick={this.clearForm} className="btn">
+          <button
+            className="btn"
+            type="button"
+            onClick={this.clearForm}
+          >
             CLEAR
           </button>
         </div>
       </form>
-      
+
     )
   }
 }

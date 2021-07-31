@@ -1,17 +1,17 @@
 .bike-card {
-  position: relative;
-  display: flex;
-  flex-direction: row;
+  position       : relative;
+  display        : flex;
+  flex-direction : row;
+  top: 40px;
+  left: -10px;
   justify-content: space-between;
-  width   : 618px;
-  height  : 83px;
-  /* left    : 12px; */
-  /* top     : 51px; */
-  margin-bottom: 12px;
-  background   : #E8E8E8;
-  border       : 2px solid #6FCF97;
-  box-sizing   : border-box;
-  border-radius: 10px;
+  width          : 100%;
+  height         : 83px;
+  margin-bottom  : 12px;
+  background     : #E8E8E8;
+  border         : 2px solid #6FCF97;
+  box-sizing     : border-box;
+  border-radius  : 10px;
 }
 
 .busy {
@@ -20,6 +20,7 @@
 
 .unavailable {
   border-color: #EB5757;
+  opacity     : 0.5;
 }
 
 .unavailable-text {
@@ -29,141 +30,56 @@
 .bike-info {
   display       : flex;
   flex-direction: row;
-  align-self: center;
-  margin-left: 18px;
+  align-self    : center;
+  margin-left   : 18px;
 }
 
 .name-type-color {
-  display       : inline-block;
-
-  align-items   : flex-start;
-  padding       : 0px;
-
-  width   : 266px;
-  height  : 34px;
-  left    : 30px;
-  top     : 158px;
+  
+  position   : absolute;
+  display    : inline-block;
+  align-items: flex-start;
+  width      : auto;
+  height     : 34px;
+  left       : 18px;
+  top        : 12px;
 }
 
 .price {
   align-self: flex-end;
-  margin: 0 1px 12px 0;
+  margin    : 0 1px 12px 0;
 }
 
 .cross {
-  width: 8px;
-  height: 8px;
-  position: absolute;
-  top: 12px;
-  right: 12px;
+  width     : 8px;
+  height    : 8px;
+  position  : absolute;
+  top       : 12px;
+  right     : 12px;
   transition: transform 0.2s;
 }
 
 .cross:hover {
-    transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 .cross:active {
   transform: scale(0.9);
 }
 
-/*
-.data-id {
-  display       : flex;
-  flex-direction: column;
-  align-items   : flex-start;
-  padding       : 0px;
-
-  position: absolute;
-  width   : 266px;
-  height  : 34px;
-  left    : 30px;
-  top     : 63px;
-}
-
-.bike-card-dropdown {
+.status {
+  position      : absolute;
   display       : flex;
   flex-direction: row;
-  align-items   : flex-start;
-  padding       : 0px;
-
-  position: absolute;
-  width   : 148px;
-  height  : 24px;
-  left    : 30px;
-  top     : 98px;
+  bottom        : 12px;
 }
 
 .id {
-  position: static;
-  left    : 0%;
-  right   : 71.05%;
-  top     : 58.82%;
-  bottom  : 0%;
-
-  font-family: Saira;
-  font-style : normal;
-  font-weight: normal;
+  position   : absolute;
+  bottom     : 1px;
   font-size  : 8px;
   line-height: 13px;
   display    : flex;
   align-items: flex-end;
-
-  color: #717171;
+  color      : #717171;
 }
-
-.price {
-  position: absolute;
-  left    : 39.41%;
-  right   : 46.44%;
-  top     : 14.86%;
-  bottom  : 82.57%;
-
-  font-family: Saira;
-  font-style : normal;
-  font-weight: normal;
-  font-size  : 24px;
-  line-height: 38px;
-  display    : flex;
-  align-items: center;
-
-  color: #000000;
-}
-
-.status {
-  position: static;
-  left    : 0%;
-  right   : 61.49%;
-  top     : 0%;
-  bottom  : 0%;
-
-  font-family: Saira;
-  font-style : normal;
-  font-weight: normal;
-  font-size  : 14px;
-  line-height: 22px;
-  display    : flex;
-  align-items: center;
-
-  color: #333333;
-}
-
-.dropdown {
-  position: absolute;
-  width   : 60px;
-  height  : 22px;
-  left    : 75px;
-  top     : 0px;
-
-  font-family: Saira;
-  font-style : normal;
-  font-weight: normal;
-  font-size  : 14px;
-  line-height: 22px;
- 
-
-  display    : flex;
-  align-items: center;
-
-  color: #333333;
-} */

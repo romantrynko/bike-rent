@@ -9,7 +9,7 @@ export default function StatusDropdown({ id, status, changeStatus }) {
       changeStatus(id, event.target.value)
     }}>
       {Object.values(STATUSES).map(statusOption => {
-        return <option key={statusOption} value={statusOption}>{statusOption}</option>
+        return <option className="option" key={statusOption} value={statusOption}>{statusOption}</option>
       })}
     </select>
   )
