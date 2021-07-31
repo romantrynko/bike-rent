@@ -1,0 +1,49 @@
+.footer {
+  display        : flex;
+flex-direction : row;
+justify-content: flex-end;
+align-items    : center;
+padding        : 10px;
+
+position: absolute;
+width   : 100%;
+height  : 42px;
+right   : 0px;
+bottom  : 0px;
+
+background: #696969;
+}
+
+.text1 {
+  position   : static;
+  width      : 98px;
+  height     : 31px;
+  left       : 839px;
+  top        : 5.5px;
+  font-family: Saira;
+  font-style : normal;
+  font-weight: normal;
+  font-size  : 20px;
+  line-height: 31px;
+  display    : flex;
+  align-items: flex-end;
+  text-align : center;
+  color      : #CBCACA;
+}
+
+.text2 {
+  position   : static;
+  width      : 195px;
+  height     : 31px;
+  left       : 947px;
+  top        : 5.5px;
+  font-family: Saira;
+  font-style : normal;
+  font-weight: normal;
+  font-size  : 20px;
+  line-height: 31px;
+  display    : flex;
+  align-items: flex-end;
+  text-align : center;
+  color      : #FFFFFF;
+}

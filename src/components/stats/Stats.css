@@ -1,0 +1,87 @@
+.statistics {
+  position: static;
+  width   : 98px;
+  height  : 28px;
+  left    : 10px;
+  top     : 10px;
+
+  font-family: Saira;
+  font-style : normal;
+  font-weight: bold;
+  font-size  : 18px;
+  line-height: 28px;
+
+  color: #000000;
+}
+
+.total {
+  position: static;
+  width   : 87px;
+  height  : 22px;
+  left    : 10px;
+  top     : 43px;
+
+  font-family: Saira;
+  font-style : normal;
+  font-weight: normal;
+  font-size  : 14px;
+  line-height: 22px;
+  /* identical to box height */
+
+
+  color: #000000;
+}
+
+.available {
+  position: static;
+  width   : 117px;
+  height  : 22px;
+  left    : 10px;
+  top     : 70px;
+
+  font-family: Saira;
+  font-style : normal;
+  font-weight: normal;
+  font-size  : 14px;
+  line-height: 22px;
+  /* identical to box height */
+
+
+  color: #000000;
+}
+
+.booked {
+  position: static;
+  width   : 104px;
+  height  : 22px;
+  left    : 10px;
+  top     : 97px;
+
+  font-family: Saira;
+  font-style : normal;
+  font-weight: normal;
+  font-size  : 14px;
+  line-height: 22px;
+  /* identical to box height */
+
+
+  color: #000000;
+}
+
+.av-cost {
+  position: static;
+  width   : 206px;
+  height  : 22px;
+  left    : 10px;
+  top     : 124px;
+
+  font-family: Saira;
+  font-style : normal;
+  font-weight: normal;
+  font-size  : 14px;
+  line-height: 22px;
+  /* identical to box height */
+
+
+  color: #000000;
+}
