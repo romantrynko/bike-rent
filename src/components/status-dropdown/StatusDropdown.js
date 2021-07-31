@@ -5,7 +5,7 @@ import './StatusDropdown.css';
 
 export default function StatusDropdown({ id, status, changeStatus }) {
   return (
-    <select value={status} onChange={event => {
+    <select className='select' value={status} onChange={event => {
       changeStatus(id, event.target.value)
     }}>
       {Object.values(STATUSES).map(statusOption => {

@@ -5,12 +5,12 @@ import './Stats.css';
 
 export default class Stats extends Component {
   get getAverage() {
-    const {bikes}= this.props;
+    const { bikes } = this.props;
 
     if (!this.totalBikes) return 0;
 
     const bikesTotalCost = bikes.reduce((prev, curr) => prev + Number(curr.price), 0);
-  
+
     return bikesTotalCost / this.totalBikes;
   }
 
@@ -30,10 +30,27 @@ export default class Stats extends Component {
     return (
       <div>
         <div className="statistics">STATISTICS</div>
-        <div className="total">Total Bikes: {this.totalBikes}</div>
-        <div className="available">Available bikes: {this.availableBikes}</div>
-        <div className="booked">Booked bikes: {this.busyBikes}</div>
-        <div className="av-cost">Average bike cost: {this.getAverage}</div>
+        <div className="total">{'Total Bikes: '}
+          <b>
+            {this.totalBikes}
+          </b>
+        </div>
+        <div className="available">{'Available bikes: ' }
+          <b>
+            {this.availableBikes}
+          </b>
+        </div>
+        <div className="booked">{'Booked bikes: '}
+          <b>
+            {this.busyBikes}
+          </b>
+        </div>
+        <div className="av-cost">{'Average bike cost: '}
+          <b>
+            {this.getAverage.toFixed()} 
+          </b>
+           {' UAH/hr.'}
+        </div>
       </div>
     )
   }

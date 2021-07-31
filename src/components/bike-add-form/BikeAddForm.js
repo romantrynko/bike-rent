@@ -138,7 +138,7 @@ export default class BikeAddForm extends Component {
             onChange={this.onColorChange}
           />
           <input
-            type="text"
+            type="number"
             className="input"
             id="wheelsize"
             placeholder="Wheel size"
@@ -181,14 +181,14 @@ export default class BikeAddForm extends Component {
 
         <div className="button-row">
           <button
-            className="btn"
+            className="btn btn-1"
             type="submit"
             onSubmit={this.onSubmit}
           >
             SAVE
           </button>
           <button
-            className="btn"
+            className="btn btn-2"
             type="button"
             onClick={this.clearForm}
           >

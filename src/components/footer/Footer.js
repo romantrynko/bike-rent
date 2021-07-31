@@ -8,8 +8,13 @@ export default function Footer() {
 
   return (
     <div className="footer">
-      <span className="text1">Developer: </span>
-      <span className="text2">{`${devFirstName} ${devLastName}`}</span>
+      <span className="text1">
+        {"Developer: "}
+        <span className="text2">
+          {`${devFirstName} ${devLastName}`}
+        </span>
+      </span>
+
     </div>
   )
 }
