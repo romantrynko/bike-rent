@@ -1,14 +1,12 @@
 import React from 'react';
+import { TITLE } from '../../constants';
 
-import './Header.css'
+import './Header.css';
 
 export default function Header() {
-  const title = 'admin.bike-booking.com'
-
   return (
     <div className="header">
-      <span className="title">{title.toUpperCase()}</span>
+      <span className="title">{TITLE.toUpperCase()}</span>
     </div>
   )
-}
-
+};

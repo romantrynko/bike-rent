@@ -67,6 +67,7 @@ export default class BikeAddForm extends Component {
     const {
       onAddBike
     } = this.props;
+
     const {
       name,
       type,
@@ -196,7 +197,6 @@ export default class BikeAddForm extends Component {
           </button>
         </div>
       </form>
-
     )
   }
-}
+};

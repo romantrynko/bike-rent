@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { STATUSES } from '../../constants';
 
 import './StatusDropdown.css';
@@ -13,4 +13,4 @@ export default function StatusDropdown({ id, status, changeStatus }) {
       })}
     </select>
   )
-}
+};

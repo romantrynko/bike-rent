@@ -12,19 +12,19 @@ export default class Stats extends Component {
     const bikesTotalCost = bikes.reduce((prev, curr) => prev + Number(curr.price), 0);
 
     return bikesTotalCost / this.totalBikes;
-  }
+  };
 
   get availableBikes() {
     return this.props.bikes.filter(bike => bike.status === STATUSES.AVAILABLE).length;
-  }
+  };
 
   get busyBikes() {
     return this.props.bikes.filter(bike => bike.status === STATUSES.BUSY).length;
-  }
+  };
 
   get totalBikes() {
     return this.props.bikes.length;
-  }
+  };
 
   render() {
     return (
@@ -35,7 +35,7 @@ export default class Stats extends Component {
             {this.totalBikes}
           </b>
         </div>
-        <div className="available">{'Available bikes: ' }
+        <div className="available">{'Available bikes: '}
           <b>
             {this.availableBikes}
           </b>
@@ -47,11 +47,11 @@ export default class Stats extends Component {
         </div>
         <div className="av-cost">{'Average bike cost: '}
           <b>
-            {this.getAverage.toFixed()} 
+            {this.getAverage.toFixed()}
           </b>
-           {' UAH/hr.'}
+          {' UAH/hr.'}
         </div>
       </div>
     )
-  }
-}
+  };
+};

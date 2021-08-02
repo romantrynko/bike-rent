@@ -1,10 +1,12 @@
 import React from 'react';
-import cn from 'classnames';
+import { STATUSES } from '../../constants';
+
 import StatusDropdown from '../status-dropdown/StatusDropdown';
 import cross from '../../assets/cross.png';
 
+import cn from 'classnames';
+
 import './BikeCard.css';
-import { STATUSES } from '../../constants';
 
 
 export default function BikeCard({ bike, removeBike, changeStatus }) {
@@ -22,11 +24,11 @@ export default function BikeCard({ bike, removeBike, changeStatus }) {
   const isUnavailable = status === STATUSES.UNAVAILABLE;
 
   return (
-    <div className={cn("bike-card", { busy: status === STATUSES.BUSY, unavailable: isUnavailable })}>
+    <div id="main" className={cn("bike-card", { busy: status === STATUSES.BUSY, unavailable: isUnavailable })}>
       <div className="bike-info">
         <div className="data-id">
           <div className="name-type-color">
-            <b className={cn({ "unavailable-text": isUnavailable})}>{name.toUpperCase()} - </b>
+            <b className={cn({ "unavailable-text": isUnavailable })}>{name.toUpperCase()} - </b>
             <span className={cn({ "unavailable-text": isUnavailable })}> {type.toUpperCase()} </span>
             <span className={cn({ "unavailable-text": isUnavailable })}>({color.toUpperCase()})</span>
             <div className={cn("id", { "unavailable-text": isUnavailable })}>ID: {id}</div>
@@ -42,8 +44,8 @@ export default function BikeCard({ bike, removeBike, changeStatus }) {
       </div>
 
       <img src={cross} className="cross" alt="cross" onClick={() => removeBike(id)} />
+
       <div className={cn("price", { "unavailable-text": isUnavailable })}>{price} UAH/hr.</div>
     </div>
-
   )
-}
+};

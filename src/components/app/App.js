@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
-import Header from '../header/Header';
-import './App.css';
-import Footer from '../footer/Footer';
-import uniqueId from 'uniqid';
-import localforage from 'localforage';
-import { bikesList, BIKES_KEY, STATUSES } from '../../constants';
+import { BIKES_KEY, STATUSES } from '../../constants';
+
 import BikeAddForm from '../bike-add-form/BikeAddForm';
 import BikeCard from '../bike-card/BikeCard';
+import Footer from '../footer/Footer';
+import Header from '../header/Header';
 import Stats from '../stats/Stats';
+
+import localforage from 'localforage';
+import uniqueId from 'uniqid';
+
+import './App.css';
 
 class App extends Component {
 
   state = {
     bikes: []
-  }
+  };
 
   async componentDidMount() {
     const bikes = await localforage.getItem(BIKES_KEY);
@@ -21,7 +24,7 @@ class App extends Component {
     if (!bikes) return;
 
     this.setState({ bikes });
-  }
+  };
 
   addBike = async (newBike) => {
     const bikes = await localforage.getItem(BIKES_KEY) || [];
@@ -31,7 +34,7 @@ class App extends Component {
 
     await localforage.setItem(BIKES_KEY, bikesWithNewBike);
     this.setState({ bikes: bikesWithNewBike });
-  }
+  };
 
   removeBike = async (id) => {
     const bikes = await localforage.getItem(BIKES_KEY) || [];
@@ -39,17 +42,17 @@ class App extends Component {
 
     await localforage.setItem(BIKES_KEY, filteredBikes);
     this.setState({ bikes: filteredBikes });
-  }
+  };
 
   changeStatus = async (id, status) => {
     const bikes = await localforage.getItem(BIKES_KEY) || [];
-    const filteredBikes = bikes.find(bike => bike.id === id);
+    const foundedBike = bikes.find(bike => bike.id === id);
 
-    filteredBikes.status = status;
+    foundedBike.status = status;
 
     await localforage.setItem(BIKES_KEY, bikes);
     this.setState({ bikes });
-  }
+  };
 
   render() {
     const { bikes } = this.state;
@@ -59,14 +62,20 @@ class App extends Component {
         <Header />
 
         <div className="bikeList">
-          {bikes.length ?
-            bikes.map(bike => {
-              return (
-                <BikeCard changeStatus={this.changeStatus} removeBike={this.removeBike} bike={bike} />
-              )
-            }) : <div className="no-data">
-              <span className="no-data-text">No bikes yet available</span>
-            </div>
+          {
+            bikes.length ?
+              bikes.map(bike => {
+                return (
+                  <BikeCard
+                    bike={bike}
+                    changeStatus={this.changeStatus}
+                    key={bike.id}
+                    removeBike={this.removeBike}
+                  />
+                )
+              }) : <div className="no-data">
+                <span className="no-data-text">No bikes yet available</span>
+              </div>
           }
         </div>
 
@@ -80,6 +89,6 @@ class App extends Component {
       </div>
     );
   }
-}
+};
 
 export default App;

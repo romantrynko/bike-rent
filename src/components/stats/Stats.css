@@ -1,49 +1,49 @@
 .statistics {
-  position: absolute;
-  width   : 98px;
-  height  : 28px;
-  top: 25px;
+  position   : absolute;
+  width      : 98px;
+  height     : 28px;
+  top        : 25px;
   font-size  : 18px;
   font-weight: bold;
-  color: #000000;
+  color      : #000000;
 }
 
 .total {
-  position: absolute;
-  width   : auto;
-  height  : 22px;
-  left    : 10px;
-  top     : 63px;
-  font-size  : 14px;
-  color: #000000;
+  position : absolute;
+  width    : auto;
+  height   : 22px;
+  left     : 10px;
+  top      : 63px;
+  font-size: 14px;
+  color    : #000000;
 }
 
 .available {
-  position: absolute;
-  width   : auto;
-  height  : 22px;
-  left    : 10px;
-  top     : 90px;
-  font-size  : 14px;
-  color: #000000;
+  position : absolute;
+  width    : auto;
+  height   : 22px;
+  left     : 10px;
+  top      : 90px;
+  font-size: 14px;
+  color    : #000000;
 }
 
 .booked {
-  position: absolute;
-  width   : auto;
-  height  : 22px;
-  left    : 10px;
-  top     : 117px;
-  font-size  : 14px;
-  color: #000000;
+  position : absolute;
+  width    : auto;
+  height   : 22px;
+  left     : 10px;
+  top      : 117px;
+  font-size: 14px;
+  color    : #000000;
 }
 
 .av-cost {
-  position: absolute;
-  width   : auto;
-  height  : 22px;
-  left    : 10px;
-  top     : 144px;
-  font-size  : 14px;
-  color: #000000;
+  position : absolute;
+  width    : auto;
+  height   : 22px;
+  left     : 10px;
+  top      : 144px;
+  font-size: 14px;
+  color    : #000000;
 }
