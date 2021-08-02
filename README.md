@@ -22,3 +22,7 @@ npm install
 ```bash
 npm start
 ```
+
+## Deployed version of project:
+
+[biker-ing.herokuapp.com](https://biker-ing.herokuapp.com/)
