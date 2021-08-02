@@ -26,7 +26,7 @@ export default function BikeCard({ bike, del, removeBike, changeStatus }) {
       <div className="bike-info">
         <div className="data-id">
           <div className="name-type-color">
-            <b className={cn({ "unavailable-text": isUnavailable})}>{name.toUpperCase()} - </b>
+            <b className={cn({ "unavailable-text": isUnavailable })}>{name.toUpperCase()} - </b>
             <span className={cn({ "unavailable-text": isUnavailable })}> {type.toUpperCase()} </span>
             <span className={cn({ "unavailable-text": isUnavailable })}>({color.toUpperCase()})</span>
             <div className={cn("id", { "unavailable-text": isUnavailable })}>ID: {id}</div>
@@ -44,6 +44,5 @@ export default function BikeCard({ bike, del, removeBike, changeStatus }) {
       <img src={cross} className="cross" alt="cross" onClick={() => removeBike(id)} />
       <div className={cn("price", { "unavailable-text": isUnavailable })}>{price} UAH/hr.</div>
     </div>
-
   )
 }
